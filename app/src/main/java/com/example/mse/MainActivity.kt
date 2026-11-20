@@ -21,6 +21,10 @@ import androidx.compose.material.icons.filled.Storage
 import androidx.compose.material.icons.filled.CloudDownload
 import androidx.compose.material.icons.filled.VerifiedUser
 import androidx.compose.material.icons.filled.ReportProblem
+import androidx.compose.material.icons.filled.Sensors
+import androidx.compose.material.icons.filled.ViewList
+import androidx.compose.material.icons.filled.FilterAlt
+import androidx.compose.material.icons.filled.Map
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.PrimaryScrollableTabRow
@@ -47,6 +51,10 @@ import com.example.mse.ui.screens.task9.ReservoirJournalScreen
 import com.example.mse.ui.screens.task10.CascadeForecastScreen
 import com.example.mse.ui.screens.task11.SecureAccessScreen
 import com.example.mse.ui.screens.task12.NetworkErrorsScreen
+import com.example.mse.ui.screens.task13.SensorStreamsScreen
+import com.example.mse.ui.screens.task14.HydroObjectListScreen
+import com.example.mse.ui.screens.task15.HydroObjectSearchScreen
+import com.example.mse.ui.screens.task16.HydroMapScreen
 import com.example.mse.ui.theme.MSETheme
 
 class MainActivity : ComponentActivity() {
@@ -132,6 +140,26 @@ fun MainAppScreen(initialTab: Int = 0) {
             title = "Task 12: Помилки мережі",
             icon = Icons.Default.ReportProblem,
             screen = { NetworkErrorsScreen() }
+        ),
+        NavigationTab(
+            title = "Task 13: Flow датчиків",
+            icon = Icons.Default.Sensors,
+            screen = { SensorStreamsScreen() }
+        ),
+        NavigationTab(
+            title = "Task 14: Список і мапа",
+            icon = Icons.Default.ViewList,
+            screen = { HydroObjectListScreen() }
+        ),
+        NavigationTab(
+            title = "Task 15: Пошук і фільтри",
+            icon = Icons.Default.FilterAlt,
+            screen = { HydroObjectSearchScreen() }
+        ),
+        NavigationTab(
+            title = "Task 16: GPS і мапа",
+            icon = Icons.Default.Map,
+            screen = { HydroMapScreen() }
         )
     )
 
